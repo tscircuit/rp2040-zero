@@ -40,7 +40,6 @@ export const VoltageRegulator = (groupProps: GroupProps) => (
 				VOUT: ["net.V3_3", "C5.1"],
 			}}
 		/>
-		<trace from="C4.2" to="net.GND" />
 		<trace from="C5.2" to="net.GND" />
 	</group>
 );
