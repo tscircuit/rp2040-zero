@@ -8,28 +8,24 @@ export const VoltageRegulator = (groupProps: GroupProps) => (
 			schOrientation="vertical"
 			footprint="0402"
 			capacitance="2.2uF"
-			schX={-4}
 		/>
 		<capacitor
 			name="C1"
 			schOrientation="vertical"
 			footprint="0402"
 			capacitance="2.2uF"
-			schX={-3.2}
 		/>
 		<capacitor
 			name="C2"
 			schOrientation="vertical"
 			footprint="0402"
 			capacitance="2.2uF"
-			schX={-2.4}
 		/>
 		<capacitor
 			name="C5"
 			schOrientation="vertical"
 			footprint="0402"
 			capacitance="1uF"
-			schX={2}
 		/>
 		<RT9013_33GB
 			name="U1"
