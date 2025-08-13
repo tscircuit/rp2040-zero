@@ -82,6 +82,8 @@ export const RP2040 = (props: ChipProps<typeof pinLabels>) => {
             "QSPI_SD3",
             "DVDD1",
             "DVDD2",
+            "VREG_VIN",
+            "VREG_VOUT",
             "IOVDD1",
             "IOVDD2",
             "IOVDD3",
@@ -92,8 +94,6 @@ export const RP2040 = (props: ChipProps<typeof pinLabels>) => {
             "USB_VDD",
             "USB_DP",
             "USB_DM",
-            "VREG_VOUT",
-            "VREG_VIN",
             "ADC_AVDD",
 
             "GPIO0",
@@ -125,6 +125,19 @@ export const RP2040 = (props: ChipProps<typeof pinLabels>) => {
             "GPIO20",
             "GPIO19",
             "GPIO18",
+            "GPIO17",
+            "GPIO16",
+
+            "GPIO12",
+            "GPIO13",
+            "GPIO14",
+            "GPIO15",
+            "TESTEN",
+            "XIN",
+            "XOUT",
+            "SWCLK",
+            "SWD",
+            "RUN",
           ]
         }
       }}
@@ -139,7 +152,19 @@ export const RP2040 = (props: ChipProps<typeof pinLabels>) => {
         },
         GPIO25: {
           marginTop: 0.4
-        }
+        },
+        GPIO12: {
+          marginTop: 0.4
+        },
+        XIN: {
+          marginTop: 0.4
+        },
+        XOUT: {
+          marginBottom: 0.4
+        },
+        VREG_VIN: {
+          marginTop: 0.4
+        },
       }}
       manufacturerPartNumber="RP2040"
       footprint={<footprint>
