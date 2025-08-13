@@ -29,10 +29,10 @@ export const CrystalCircuit = () => (
     <ABM8_272_T3
       name="X1"
       connections={{
-        pin1: ["C16.1", "net.XIN"],
-        pin2: "net.GND",
-        pin3: "net.GND",
-        pin4: ["C17.1", "R8.2"],
+        XTAL1: ["C16.1", "net.XIN"],
+        GND1: "net.GND",
+        GND2: "net.GND",
+        XTAL2: ["C17.1", "R8.2"],
       }}
     />
   </group>
