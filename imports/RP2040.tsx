@@ -44,7 +44,7 @@ const pinLabels = {
   pin41: ["GPIO29_ADC3"],
   pin42: ["IOVDD5"],
   pin43: ["ADC_AVDD"],
-  pin44: ["VREG_IN"],
+  pin44: ["VREG_VIN"],
   pin45: ["VREG_VOUT"],
   pin46: ["USB_DM"],
   pin47: ["USB_DP"],
@@ -56,7 +56,7 @@ const pinLabels = {
   pin53: ["QSPI_SD0"],
   pin54: ["QSPI_SD2"],
   pin55: ["QSPI_SD1"],
-  pin56: ["QSPI_SS"],
+  pin56: ["QSPI_SS_N"],
   pin57: ["GND"]
 } as const
 
@@ -69,6 +69,78 @@ export const RP2040 = (props: ChipProps<typeof pinLabels>) => {
     "C2040"
   ]
 }}
+      schPinArrangement={{
+        leftSide: {
+          direction: "top-to-bottom",
+          pins: [
+            // Top on ref
+            "QSPI_SS_N",
+            "QSPI_SD1",
+            "QSPI_SD2",
+            "QSPI_SD0",
+            "QSPI_SCLK",
+            "QSPI_SD3",
+            "DVDD1",
+            "DVDD2",
+            "IOVDD1",
+            "IOVDD2",
+            "IOVDD3",
+            "IOVDD4",
+            "IOVDD5",
+            "IOVDD6",
+            "GND",
+            "USB_VDD",
+            "USB_DP",
+            "USB_DM",
+            "VREG_VOUT",
+            "VREG_VIN",
+            "ADC_AVDD",
+
+            "GPIO0",
+            "GPIO1",
+            "GPIO2",
+            "GPIO3",
+            "GPIO4",
+            "GPIO5",
+            "GPIO6",
+            "GPIO7",
+            "GPIO8",
+            "GPIO9",
+            "GPIO10",
+            "GPIO11",
+          ],
+        },
+        rightSide: {
+          direction: "top-to-bottom",
+          pins: [
+            "GPIO29_ADC3",
+            "GPIO28_ADC2",
+            "GPIO27_ADC1",
+            "GPIO26_ADC0",
+            "GPIO25",
+            "GPIO24",
+            "GPIO23",
+            "GPIO22",
+            "GPIO21",
+            "GPIO20",
+            "GPIO19",
+            "GPIO18",
+          ]
+        }
+      }}
+      schWidth={3}
+      schPinStyle={{
+        IOVDD1: {
+          marginTop: 0.4,
+        },
+        GND: {
+          marginTop: 0.4,
+          marginBottom: 0.4,
+        },
+        GPIO25: {
+          marginTop: 0.4
+        }
+      }}
       manufacturerPartNumber="RP2040"
       footprint={<footprint>
         <smtpad portHints={["pin1"]} pcbX="-3.5501580000000104mm" pcbY="2.6000710000001845mm" width="1.0999978mm" height="0.19999959999999997mm" shape="rect" />
