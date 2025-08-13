@@ -10,10 +10,13 @@
     "build": "tsci build",
     "snapshot": "tsci snapshot",
     "snapshot:update": "tsci snapshot --update",
-    "start": "tsci dev"
+    "start": "tsci dev",
+    "format": "biome format --write .",
+    "format:check": "biome format ."
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.1.4",
     "@types/react": "^19.1.9",
-    "tscircuit": "^0.0.581"
+    "tscircuit": "^0.0.592"
   }
 }
