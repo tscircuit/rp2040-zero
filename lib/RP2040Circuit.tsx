@@ -18,6 +18,8 @@ export const RP2040Circuit = () => (
         USB_VDD: "net.USB_VDD",
         USB_DM: "net.USB_N",
         USB_DP: "net.USB_P",
+
+        GND: "net.GND",
       }}
     />
     {/* Decoupling Capacitors for IOVDD */}
