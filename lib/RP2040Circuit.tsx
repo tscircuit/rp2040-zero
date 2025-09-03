@@ -18,55 +18,49 @@ export const RP2040Circuit = () => (
       }}
     />
     {/* Decoupling Capacitors for IOVDD */}
-    <group>
-      {["C12", "C14", "C8", "C13", "C15", "C19"].map((cName) => (
-        <capacitor
-          name={cName}
-          capacitance="100nF"
-          schOrientation="vertical"
-          connections={{
-            pin2: "net.GND",
-          }}
-        />
-      ))}
-    </group>
-    {/* DVDD */}
-    <group>
+    {["C12", "C14", "C8", "C13", "C15", "C19"].map((cName) => (
       <capacitor
-        name="C18"
+        name={cName}
         capacitance="100nF"
         schOrientation="vertical"
         connections={{
           pin2: "net.GND",
         }}
       />
-      <capacitor
-        name="C7"
-        capacitance="22nF"
-        schOrientation="vertical"
-        connections={{
-          pin2: "net.GND",
-        }}
-      />
-    </group>
-    {/* VREG */}
+    ))}
+    <capacitor
+      name="C18"
+      capacitance="100nF"
+      schOrientation="vertical"
+      connections={{
+        pin2: "net.GND",
+      }}
+    />
+    <capacitor
+      name="C7"
+      capacitance="22nF"
+      schOrientation="vertical"
+      connections={{
+        pin2: "net.GND",
+      }}
+    />
     <capacitor
       name="C9"
       capacitance="2.2uF"
       schOrientation="vertical"
-      connections={{ pin2: "net.GND" }}
+      connections={{ pin1: "net.V1_1", pin2: "net.GND" }}
     />
     <capacitor
       name="C10"
       capacitance="2.2uF"
       schOrientation="vertical"
-      connections={{ pin2: "net.GND" }}
+      connections={{ pin1: "U3.VREG_VIN", pin2: "net.GND" }}
     />
     <capacitor
       name="C11"
       capacitance="2.2uF"
       schOrientation="vertical"
-      connections={{ pin2: "net.GND" }}
+      connections={{ pin1: "U3.ADC_AVDD", pin2: "net.GND" }}
     />
   </group>
 )
