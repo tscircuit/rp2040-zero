@@ -11,10 +11,13 @@ export const RP2040Circuit = () => (
         IOVDD4: ["C13.pin1", "net.V3_3"],
         IOVDD5: ["C15.pin1", "net.V3_3"],
         IOVDD6: ["C19.pin1", "net.V3_3"],
-        // IOVDD6 is adjacent to USB_VDD
 
         DVDD1: ["C18.1", "net.V1_1"],
         DVDD2: ["C7.1", "net.V1_1"],
+
+        USB_VDD: "net.USB_VDD",
+        USB_DM: "net.USB_N",
+        USB_DP: "net.USB_P",
       }}
     />
     {/* Decoupling Capacitors for IOVDD */}
