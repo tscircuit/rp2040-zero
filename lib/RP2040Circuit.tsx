@@ -1,7 +1,7 @@
 import { RP2040 } from "../imports/RP2040"
 
 export const RP2040Circuit = () => (
-  <group>
+  <group pcbPack pcbGap={2}>
     <RP2040
       name="U3"
       connections={{
@@ -26,6 +26,7 @@ export const RP2040Circuit = () => (
         name={cName}
         capacitance="100nF"
         schOrientation="vertical"
+        footprint="0603"
         connections={{
           pin2: "net.GND",
         }}
@@ -34,6 +35,7 @@ export const RP2040Circuit = () => (
     <capacitor
       name="C18"
       capacitance="100nF"
+      footprint="0603"
       schOrientation="vertical"
       connections={{
         pin2: "net.GND",
@@ -42,6 +44,7 @@ export const RP2040Circuit = () => (
     <capacitor
       name="C7"
       capacitance="22nF"
+      footprint="0603"
       schOrientation="vertical"
       connections={{
         pin2: "net.GND",
@@ -50,18 +53,21 @@ export const RP2040Circuit = () => (
     <capacitor
       name="C9"
       capacitance="2.2uF"
+      footprint="0603"
       schOrientation="vertical"
       connections={{ pin1: "net.V1_1", pin2: "net.GND" }}
     />
     <capacitor
       name="C10"
       capacitance="2.2uF"
+      footprint="0603"
       schOrientation="vertical"
       connections={{ pin1: "U3.VREG_VIN", pin2: "net.GND" }}
     />
     <capacitor
       name="C11"
       capacitance="2.2uF"
+      footprint="0603"
       schOrientation="vertical"
       connections={{ pin1: "U3.ADC_AVDD", pin2: "net.GND" }}
     />
