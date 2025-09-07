@@ -1,6 +1,6 @@
 # RP2040 Zero
 
-A tiny development board for the RP2040 microcontroller featuring...
+A tiny development board for the RP2040 microcontroller in the [xiao form factor](https://files.seeedstudio.com/wiki/XIAO/Seeed-Studio-XIAO-Series-SOM-Datasheet.pdf)
 
 - RP2040 Microcontroller with 20 GPIO broken out
 - USB-C Port
