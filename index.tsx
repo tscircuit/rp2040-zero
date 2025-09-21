@@ -1,18 +1,16 @@
 import { VoltageRegulator } from "./lib/VoltageRegulator"
-import { RP2040 } from "./imports/RP2040"
-import { PinOutCircuit } from "./lib/PinOutCircuit"
 import { LedCircuit } from "./lib/LedCircuit"
 import { FlashCircuit } from "./lib/FlashCircuit"
 import { CrystalCircuit } from "./lib/CrystalCircuit"
 import { RP2040Circuit } from "./lib/RP2040Circuit"
+import { XiaoBoardRP2040 } from "./lib/XiaoBoardRP2040"
 
 export default () => (
-  <board routingDisabled schMaxTraceDistance={5}>
+  <XiaoBoardRP2040>
     <VoltageRegulator />
-    <PinOutCircuit />
     <LedCircuit />
     <FlashCircuit />
     <CrystalCircuit />
     <RP2040Circuit />
-  </board>
+  </XiaoBoardRP2040>
 )
