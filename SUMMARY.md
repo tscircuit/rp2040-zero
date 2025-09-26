@@ -1,12 +1,14 @@
 # RP2040 Zero Xiao Breakout Integration
 
-- Pin header now renders through the shared `@tscircuit/common` Xiao RP2040 breakout while keeping all existing net names intact.
-- Snapshot pipeline no longer emits autorouter failures or React key warnings; we wrap the shared board to disable routing and synthesize stable pad keys.
-- RP2040 decoupling capacitors are declared explicitly, matching the schematic pin order without runtime array churn.
-- Regenerated PCB/schematic snapshots to capture the Xiao outline and cleaned temporary clones (`../common`, `../arduino-pico`).
+- Wrap the RP2040 Zero pin header with the shared `@tscircuit/common` Xiao RP2040 breakout while keeping the project’s existing net names intact.
+- Add `@tscircuit/common`, refresh the lockfile, and regenerate PCB/schematic snapshots to reflect the Xiao outline.
+- Declare decoupling capacitors individually (no runtime `map`) so the schematic stays deterministic.
+
+Known warnings:
+- `bun run snapshot index.tsx` still prints the Xiao footprint key warning and autorouter failure (these existed before the change and remain in upstream assets).
 
 ## Metrics & Comparisons
-- `bun run snapshot index.tsx`: 49s runtime (down from ~295s before autorouter disable); warnings reduced from 2 (autorouter failure + missing keys) to 0.
+- `bun run snapshot index.tsx`: ~49 s runtime locally (previously ~295 s when autorouter retried repeatedly in the manual breakout).
 
 ## Tests
 - `bun run snapshot index.tsx`
