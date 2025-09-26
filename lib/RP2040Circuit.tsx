@@ -23,17 +23,48 @@ export const RP2040Circuit = () => (
       }}
     />
     {/* Decoupling Capacitors for IOVDD */}
-    {["C12", "C14", "C8", "C13", "C15", "C19"].map((cName) => (
-      <capacitor
-        name={cName}
-        capacitance="100nF"
-        schOrientation="vertical"
-        footprint="0603"
-        connections={{
-          pin2: "net.GND",
-        }}
-      />
-    ))}
+    <capacitor
+      name="C12"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
+    <capacitor
+      name="C14"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
+    <capacitor
+      name="C8"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
+    <capacitor
+      name="C13"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
+    <capacitor
+      name="C15"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
+    <capacitor
+      name="C19"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
     <capacitor
       name="C18"
       capacitance="100nF"
