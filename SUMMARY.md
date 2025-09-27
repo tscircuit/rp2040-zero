@@ -8,7 +8,7 @@ Known warnings:
 - `bun run snapshot index.tsx` still prints the Xiao footprint key warning and autorouter failure (these existed before the change and remain in upstream assets).
 
 ## Metrics & Comparisons
-- `bun run snapshot index.tsx`: ~49 s runtime locally (previously ~295 s when autorouter retried repeatedly in the manual breakout).
+- `bun run snapshot index.tsx`: ~55 s runtime locally (previously ~295 s when autorouter retried repeatedly in the manual breakout).
 
 ## Tests
 - `bun run snapshot index.tsx`
