@@ -5,6 +5,7 @@ export const FlashCircuit = () => (
     <capacitor
       name="C3"
       capacitance="1uF"
+      footprint="0603"
       schOrientation="vertical"
       connections={{
         pin2: "net.GND",

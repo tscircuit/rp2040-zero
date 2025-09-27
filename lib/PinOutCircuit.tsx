@@ -1,87 +1,86 @@
-export const PinOutCircuit = () => (
-  <chip
-    name="P1"
-    footprint="stampboard_left9_right9_bottom5_top0_p2.54mm_innerhole_h23.8mm_showpinlabels"
-    schWidth={1}
-    schPinArrangement={{
-      leftSide: {
-        direction: "top-to-bottom",
-        pins: [
-          "V5",
-          "GND",
-          "V3_3",
-          "GP29",
-          "GP28",
-          "GP27",
-          "GP26",
-          "GP15",
-          "GP14",
-          "GP13",
-          "GP12",
-          "GP11",
-          "GP10",
-          "GP9",
-          "GP8",
-          "GP7",
-          "GP6",
-          "GP5",
-          "GP4",
-          "GP3",
-          "GP2",
-          "GP1",
-          "GP0",
-        ],
-      },
-    }}
-    pinLabels={{
-      pin1: "V5",
-      pin2: "GND",
-      pin3: "V3_3",
-      pin4: "GP29",
-      pin5: "GP28",
-      pin6: "GP27",
-      pin7: "GP26",
-      pin8: "GP15",
-      pin9: "GP14",
-      pin10: "GP13",
-      pin11: "GP12",
-      pin12: "GP11",
-      pin13: "GP10",
-      pin14: "GP9",
-      pin15: "GP8",
-      pin16: "GP7",
-      pin17: "GP6",
-      pin18: "GP5",
-      pin19: "GP4",
-      pin20: "GP3",
-      pin21: "GP2",
-      pin22: "GP1",
-      pin23: "GP0",
-    }}
-    connections={{
-      V5: "net.V5_5",
-      GND: "net.GND",
-      V3_3: "net.V3_3",
-      GP29: "net.GPIO29",
-      GP28: "net.GPIO28",
-      GP27: "net.GPIO27",
-      GP26: "net.GPIO26",
-      GP15: "net.GPIO15",
-      GP14: "net.GPIO14",
-      GP13: "net.GPIO13",
-      GP12: "net.GPIO12",
-      GP11: "net.GPIO11",
-      GP10: "net.GPIO10",
-      GP9: "net.GPIO9",
-      GP8: "net.GPIO8",
-      GP7: "net.GPIO7",
-      GP6: "net.GPIO6",
-      GP5: "net.GPIO5",
-      GP4: "net.GPIO4",
-      GP3: "net.GPIO3",
-      GP2: "net.GPIO2",
-      GP1: "net.GPIO1",
-      GP0: "net.GPIO0",
-    }}
-  />
+import { Children, cloneElement, isValidElement, type ReactElement, type ReactNode } from "react"
+import { XiaoBoard } from "@tscircuit/common"
+
+type XiaoChipParts = {
+  outline: any
+  chip: ReactElement | null
+}
+
+const pinConnections = {
+  SWDIO: "net.SWDIO",
+  SWCLK: "net.SWCLK",
+  RUN: "net.RUN",
+  GND1: "net.GND",
+  GND2: "net.GND",
+  GND3: "net.GND",
+  VIN: "net.VSYS",
+  A0: "net.GPIO26",
+  A1: "net.GPIO27",
+  A2: "net.GPIO28",
+  A3: "net.GPIO29",
+  SDA: "net.GPIO6",
+  SCL: "net.GPIO7",
+  TX: "net.GPIO0",
+  RX: "net.GPIO1",
+  SCK: "net.GPIO2",
+  MOSI: "net.GPIO3",
+  MISO: "net.GPIO4",
+  V3_3: "net.V3_3",
+  VBUS: "net.USB_VDD",
+} as const
+
+const extractChipFromXiaoBoard = (): XiaoChipParts => {
+  const boardElement = XiaoBoard({
+    name: "P1",
+    variant: "RP2040",
+    connections: pinConnections,
+  } as any)
+
+  if (!isValidElement(boardElement)) {
+    return { outline: undefined, chip: null }
+  }
+
+  const outline = boardElement.props.outline
+  const boardChildren = Children.toArray(boardElement.props.children)
+
+  const groupElement = boardChildren.find((child) => {
+    if (!isValidElement(child)) return false
+    if (child.type === "group") return true
+    if (typeof child.type === "function" && child.type.name === "GroupComponent") return true
+    return false
+  })
+
+  if (!groupElement || !isValidElement(groupElement)) {
+    return { outline, chip: null }
+  }
+
+  const groupChildren = Children.toArray(groupElement.props.children)
+  const chipElement = groupChildren.find((child) => {
+    if (!isValidElement(child)) return false
+    if (child.type === "chip") return true
+    if (typeof child.type === "function" && child.type.name === "ChipComponent") return true
+    return false
+  })
+
+  if (!chipElement || !isValidElement(chipElement)) {
+    return { outline, chip: null }
+  }
+
+  return {
+    outline,
+    chip: cloneElement(chipElement, chipElement.props),
+  }
+}
+
+const { outline, chip } = extractChipFromXiaoBoard()
+
+if (!outline || !chip) {
+  throw new Error("Failed to extract Xiao RP2040 breakout from @tscircuit/common")
+}
+
+export const PinOutCircuit = ({ children }: { children?: ReactNode }) => (
+  <board outline={outline} routingDisabled schMaxTraceDistance={5}>
+    {cloneElement(chip, { key: "xiao-chip" })}
+    {children}
+  </board>
 )

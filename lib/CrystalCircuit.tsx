@@ -5,6 +5,7 @@ export const CrystalCircuit = () => (
     <resistor
       name="R8"
       resistance="1k"
+      footprint="0402"
       schOrientation="vertical"
       connections={{
         pin1: "net.XOUT",
@@ -14,6 +15,7 @@ export const CrystalCircuit = () => (
       schOrientation="vertical"
       name="C17"
       capacitance="15pF"
+      footprint="0402"
       connections={{
         pin2: "net.GND",
       }}
@@ -22,6 +24,7 @@ export const CrystalCircuit = () => (
       schOrientation="vertical"
       name="C16"
       capacitance="15pF"
+      footprint="0402"
       connections={{
         pin2: "net.GND",
       }}
