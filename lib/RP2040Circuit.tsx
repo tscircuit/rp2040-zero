@@ -15,7 +15,7 @@ export const RP2040Circuit = () => (
         DVDD1: ["C18.1", "net.V1_1"],
         DVDD2: ["C7.1", "net.V1_1"],
 
-        USB_VDD: "net.USB_VDD",
+        USB_VDD: "net.V3_3",
         USB_DM: "net.USB_N",
         USB_DP: "net.USB_P",
 

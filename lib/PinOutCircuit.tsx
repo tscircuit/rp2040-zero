@@ -118,7 +118,7 @@ const pinConnections = {
   MOSI: "net.GPIO3",
   MISO: "net.GPIO4",
   V3_3: "net.V3_3",
-  VBUS: "net.USB_VDD",
+  VBUS: "net.VSYS",
 } as const
 
 const { outline, chip } = extractXiaoBoardParts()
