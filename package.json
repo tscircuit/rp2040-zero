@@ -18,5 +18,8 @@
     "@biomejs/biome": "^2.1.4",
     "@types/react": "^19.1.9",
     "tscircuit": "^0.0.614"
+  },
+  "dependencies": {
+    "@tscircuit/common": "^0.0.4"
   }
 }

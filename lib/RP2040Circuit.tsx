@@ -15,7 +15,7 @@ export const RP2040Circuit = () => (
         DVDD1: ["C18.1", "net.V1_1"],
         DVDD2: ["C7.1", "net.V1_1"],
 
-        USB_VDD: "net.USB_VDD",
+        USB_VDD: "net.V3_3",
         USB_DM: "net.USB_N",
         USB_DP: "net.USB_P",
 
@@ -23,17 +23,48 @@ export const RP2040Circuit = () => (
       }}
     />
     {/* Decoupling Capacitors for IOVDD */}
-    {["C12", "C14", "C8", "C13", "C15", "C19"].map((cName) => (
-      <capacitor
-        name={cName}
-        capacitance="100nF"
-        schOrientation="vertical"
-        footprint="0603"
-        connections={{
-          pin2: "net.GND",
-        }}
-      />
-    ))}
+    <capacitor
+      name="C12"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
+    <capacitor
+      name="C14"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
+    <capacitor
+      name="C8"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
+    <capacitor
+      name="C13"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
+    <capacitor
+      name="C15"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
+    <capacitor
+      name="C19"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
     <capacitor
       name="C18"
       capacitance="100nF"
