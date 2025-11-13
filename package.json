@@ -16,7 +16,40 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.1.4",
+    "@tscircuit/core": "^0.0.859",
     "@types/react": "^19.1.9",
-    "tscircuit": "^0.0.614"
+    "tscircuit": "^0.0.896"
+  },
+  "dependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@tscircuit/builder": "^1.11.7",
+    "@tscircuit/common": "^0.0.22",
+    "@tscircuit/props": "^0.0.399",
+    "@tscircuit/schematic-viewer": "^2.0.48",
+    "circuit-json-to-gltf": "^0.0.37",
+    "circuit-json-to-spice": "^0.0.20",
+    "circuit-to-svg": "^0.0.265",
+    "esbuild": "^0.27.0",
+    "kicad-component-converter": "^0.1.31",
+    "poppygl": "^0.0.16",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "rollup": "^4.53.2",
+    "rollup-plugin-dts": "^6.2.3",
+    "rollup-plugin-esbuild": "^6.2.1",
+    "s-expression": "^3.1.1",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.8.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }

@@ -1,10 +1,11 @@
 import { W25Q16JVUXIQ } from "../imports/W25Q16JVUXIQ"
 
 export const FlashCircuit = () => (
-  <group>
+  <group pcbX={0} pcbY={-5}>
     <capacitor
       name="C3"
       capacitance="1uF"
+      footprint="0603"
       schOrientation="vertical"
       connections={{
         pin2: "net.GND",

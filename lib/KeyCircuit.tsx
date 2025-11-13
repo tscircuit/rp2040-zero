@@ -1,10 +1,11 @@
 import { TS_1187A_B_A_B } from "../imports/TS_1187A_B_A_B"
 
 export const KeyCircuit = () => (
-  <group>
+  <group pcbX={0} pcbY={5}>
     <resistor
       name="R2"
       resistance="1k"
+      footprint="0402"
       connections={{
         pin1: "net.QSPI_SS_N",
       }}

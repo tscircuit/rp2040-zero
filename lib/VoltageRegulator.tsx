@@ -2,7 +2,7 @@ import { RT9013_33GB } from "../imports/RT9013_33GB"
 import type { GroupProps } from "@tscircuit/props"
 
 export const VoltageRegulator = (groupProps: GroupProps) => (
-  <group {...groupProps}>
+  <group {...groupProps} pcbX={-5} pcbY={-5}>
     <capacitor
       name="C6"
       schOrientation="vertical"
