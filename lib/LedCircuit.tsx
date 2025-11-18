@@ -1,11 +1,11 @@
-import { WS2812B_2020 } from "../imports/WS2812B_2020"
+﻿import { WS2812B_2020 } from "../imports/WS2812B_2020"
 
 export const LedCircuit = () => (
   <group>
     <WS2812B_2020
       name="L1"
       connections={{
-        VDD: "net.V3V3",
+        VDD: "net.V3_3",  // Fixed: was "net.V3V3"
         GND: "net.GND",
         DI: "net.GPIO16",
       }}
