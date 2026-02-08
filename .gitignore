@@ -24,3 +24,11 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Agent working directories
+.super-terminal-agents/
+super-terminal-logs/
+
+# Config files
+gemini_cli_config.json
+package-lock.json

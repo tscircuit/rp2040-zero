@@ -10,6 +10,7 @@ export default () => (
   <XiaoBoard
     variant="RP2040"
     routingDisabled
+    pcbRoutingEnabled={false}
     connections={{
       A0: "net.GPIO26",
       A1: "net.GPIO27",

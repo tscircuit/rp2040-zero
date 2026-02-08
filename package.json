@@ -20,6 +20,7 @@
     "tscircuit": "^0.0.614"
   },
   "dependencies": {
+    "@tscircuit/cli": "github:tscircuit/cli",
     "@tscircuit/common": "^0.0.36"
   }
 }
