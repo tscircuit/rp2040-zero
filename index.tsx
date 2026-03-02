@@ -1,18 +1,20 @@
-import { VoltageRegulator } from "./lib/VoltageRegulator"
-import { RP2040 } from "./imports/RP2040"
-import { PinOutCircuit } from "./lib/PinOutCircuit"
-import { LedCircuit } from "./lib/LedCircuit"
-import { FlashCircuit } from "./lib/FlashCircuit"
 import { CrystalCircuit } from "./lib/CrystalCircuit"
+import { FlashCircuit } from "./lib/FlashCircuit"
+import { LedCircuit } from "./lib/LedCircuit"
+import { PinOutCircuit } from "./lib/PinOutCircuit"
 import { RP2040Circuit } from "./lib/RP2040Circuit"
+import { VoltageRegulator } from "./lib/VoltageRegulator"
 
-export default () => (
+export const RP2040Zero = ({ children }: any) => (
   <board routingDisabled schMaxTraceDistance={5}>
     <VoltageRegulator />
     <PinOutCircuit />
     <LedCircuit />
     <FlashCircuit />
     <CrystalCircuit />
-    <RP2040Circuit />
+    {/* <RP2040Circuit /> */}
+    {children}
   </board>
 )
+
+export default RP2040Zero
