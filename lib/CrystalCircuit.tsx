@@ -1,7 +1,8 @@
 import { ABM8_272_T3 } from "../imports/ABM8_272_T3"
+import type { GroupProps } from "@tscircuit/props"
 
-export const CrystalCircuit = () => (
-  <group>
+export const CrystalCircuit = (props: GroupProps) => (
+  <group {...props}>
     <resistor
       name="R8"
       resistance="1k"
