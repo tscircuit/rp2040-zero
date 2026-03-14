@@ -1,7 +1,7 @@
 import { RP2040 } from "../imports/RP2040"
 
 export const RP2040Circuit = () => (
-  <group pcbPack pcbGap={2}>
+  <group>
     <RP2040
       name="U3"
       connections={{
@@ -22,9 +22,10 @@ export const RP2040Circuit = () => (
         GND: "net.GND",
       }}
     />
-    {/* Decoupling Capacitors for IOVDD */}
+    {/* Decoupling Capacitors for IOVDD - Added Key prop here */}
     {["C12", "C14", "C8", "C13", "C15", "C19"].map((cName) => (
       <capacitor
+        key={cName} 
         name={cName}
         capacitance="100nF"
         schOrientation="vertical"
