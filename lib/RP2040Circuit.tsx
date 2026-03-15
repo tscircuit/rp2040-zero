@@ -25,6 +25,7 @@ export const RP2040Circuit = () => (
     {/* Decoupling Capacitors for IOVDD */}
     {["C12", "C14", "C8", "C13", "C15", "C19"].map((cName) => (
       <capacitor
+        key={cName}
         name={cName}
         capacitance="100nF"
         schOrientation="vertical"

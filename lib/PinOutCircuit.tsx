@@ -1,7 +1,7 @@
 export const PinOutCircuit = () => (
   <chip
     name="P1"
-    footprint="stampboard_left9_right9_bottom5_top0_p2.54mm_innerhole_h23.8mm_showpinlabels"
+    footprint="stampboard_left9_right9_bottom5_top0_p2.54mm_h23.8mm_showpinlabels"
     schWidth={1}
     schPinArrangement={{
       leftSide: {
