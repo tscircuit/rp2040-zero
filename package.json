@@ -1,6 +1,6 @@
 {
   "name": "@tsci/seveibar.rp2040-zero",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.tsx",
   "keywords": [
     "tscircuit"
@@ -13,6 +13,9 @@
     "start": "tsci dev",
     "format": "biome format --write .",
     "format:check": "biome format ."
+  },
+  "dependencies": {
+    "@tscircuit/common": "^0.0.38"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.1.4",
