@@ -13,8 +13,13 @@ export default () => (
     <FlashCircuit />
     <CrystalCircuit />
 
-    {/* 增加坐标参数，避开重叠 */}
-    <LedCircuit pcbX={10} pcbY={10} />
-    <VoltageRegulator pcbX={-10} pcbY={10} />
+    {/* 用 group 套住，这样就能在外面控制坐标了 */}
+    <group pcbX={10} pcbY={10}>
+      <LedCircuit />
+    </group>
+
+    <group pcbX={-10} pcbY={10}>
+      <VoltageRegulator />
+    </group>
   </board>
 )
