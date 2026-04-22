@@ -1,6 +1,6 @@
-import { LedCircuit } from "./lib/LedCircuit"
 import { VoltageRegulator } from "./lib/VoltageRegulator"
 import { PinOutCircuit } from "./lib/PinOutCircuit"
+import { LedCircuit } from "./lib/LedCircuit"
 import { FlashCircuit } from "./lib/FlashCircuit"
 import { CrystalCircuit } from "./lib/CrystalCircuit"
 import { RP2040Circuit } from "./lib/RP2040Circuit"
@@ -14,7 +14,7 @@ export default () => (
         <CrystalCircuit />
     </group>
 
-    {/* 我们用 transform 或简单的偏移来强行挪开这两个新零件 */}
+    {/* 强制拉开空间，避免几何逻辑冲突 */}
     <group pcbX={15} pcbY={0}>
        <LedCircuit />
     </group>
@@ -24,3 +24,4 @@ export default () => (
     </group>
   </board>
 )
+
