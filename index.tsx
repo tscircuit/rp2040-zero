@@ -12,7 +12,9 @@ export default () => (
     <PinOutCircuit />
     <FlashCircuit />
     <CrystalCircuit />
-    <LedCircuit />
-    <VoltageRegulator />
+
+    {/* 增加坐标参数，避开重叠 */}
+    <LedCircuit pcbX={10} pcbY={10} />
+    <VoltageRegulator pcbX={-10} pcbY={10} />
   </board>
 )
