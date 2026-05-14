@@ -6,7 +6,7 @@
       "name": "rp2040-zero",
       "devDependencies": {
         "@biomejs/biome": "^2.1.4",
-        "@tscircuit/common": "^0.0.38",
+        "@tscircuit/common": "^0.0.42",
         "@types/react": "^19.1.9",
         "tscircuit": "^0.0.1638",
       },
@@ -163,7 +163,7 @@
 
     "@tscircuit/cli": ["@tscircuit/cli@0.1.1370", "", { "peerDependencies": { "tscircuit": "*" }, "bin": { "tscircuit-cli": "cli/entrypoint.js" } }, "sha512-DJuYk48AyZdwr0bITwnLR+UBBmoue1obdbzquzYGNKXaW37kP8hN+BAJLz5WlBgI2Z8t9mlPhv4w4XDuUCeVwg=="],
 
-    "@tscircuit/common": ["@tscircuit/common@0.0.38", "", {}, "sha512-EwWhDVlyByApGtbrAa1ug/g6/crlnCkcjYm0wQf0HWO+kfnw8qTvXUsTFPpI2Ay43++wAZKQJI47MrtIIdijLQ=="],
+    "@tscircuit/common": ["@tscircuit/common@0.0.42", "", {}, "sha512-HKPG3kShclg5RI26qeQ2NHyEv6gnNSg8nbkyA0LYuQaFDsBbS15zWhl2hCsB0s/M156AP4XjEdGzHRcm9z+Xsw=="],
 
     "@tscircuit/copper-pour-solver": ["@tscircuit/copper-pour-solver@0.0.20", "", { "peerDependencies": { "typescript": "^5" } }, "sha512-RDhcDA5/fP/Oo2CdhoHTG2LHx+61vm01waeh8siyuuUTRlDMF7i84ep1gS5qfvNWWGpIrf5NrM79ecBDaU1AvQ=="],
 

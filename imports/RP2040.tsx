@@ -617,7 +617,7 @@ export const RP2040 = (props: ChipProps<typeof pinLabels>) => {
           />
           <smtpad
             portHints={["pin57"]}
-            pcbX="-1.1368683772161603e-13mm"
+            pcbX="0mm"
             pcbY="0.00012700000002041634mm"
             width="3.0999938mm"
             height="3.0999938mm"

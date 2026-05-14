@@ -16,8 +16,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2.1.4",
+    "@tscircuit/common": "^0.0.42",
     "@types/react": "^19.1.9",
-    "@tscircuit/common": "^0.0.38",
     "tscircuit": "^0.0.1638"
   }
 }
