@@ -59,7 +59,7 @@ export const PinOutCircuit = () => (
       pin23: "GP0",
     }}
     connections={{
-      V5: "net.V5_5",
+      V5: "net.V5",
       GND: "net.GND",
       V3_3: "net.V3_3",
       GP29: "net.GPIO29",
