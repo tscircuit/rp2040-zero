@@ -30,9 +30,9 @@ export const VoltageRegulator = (groupProps: GroupProps) => (
     <RT9013_33GB
       name="U1"
       connections={{
-        VIN: ["C6.1", "C1.1", "C2.1", "net.VSYS"],
+        VIN: ["C6.1", "C1.1", "C2.1", "net.VSYS", "net.V5"],
         GND: ["C6.2", "C1.2", "C2.2", "net.GND"],
-        EN: "U1.1",
+        EN: "U1.VIN",
         VOUT: ["net.V3_3", "C5.1"],
       }}
     />
