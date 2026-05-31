@@ -7,12 +7,11 @@ import { CrystalCircuit } from "./lib/CrystalCircuit"
 import { RP2040Circuit } from "./lib/RP2040Circuit"
 
 export default () => (
-  <board routingDisabled schMaxTraceDistance={5}>
+  <PinOutCircuit>
     <VoltageRegulator />
-    <PinOutCircuit />
     <LedCircuit />
     <FlashCircuit />
     <CrystalCircuit />
     <RP2040Circuit />
-  </board>
+  </PinOutCircuit>
 )
