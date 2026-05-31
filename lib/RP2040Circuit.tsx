@@ -20,20 +20,74 @@ export const RP2040Circuit = () => (
         USB_DP: "net.USB_P",
 
         GND: "net.GND",
+        SWD: "net.SWDIO",
+        RUN: "net.RUN",
+        GPIO0: "net.GPIO0",
+        GPIO1: "net.GPIO1",
+        GPIO2: "net.GPIO2",
+        GPIO3: "net.GPIO3",
+        GPIO4: "net.GPIO4",
+        GPIO5: "net.GPIO5",
+        GPIO6: "net.GPIO6",
+        GPIO7: "net.GPIO7",
+        GPIO8: "net.GPIO8",
+        GPIO9: "net.GPIO9",
+        GPIO10: "net.GPIO10",
+        GPIO11: "net.GPIO11",
+        GPIO12: "net.GPIO12",
+        GPIO13: "net.GPIO13",
+        GPIO14: "net.GPIO14",
+        GPIO15: "net.GPIO15",
+        GPIO16: "net.GPIO16",
+        GPIO26_ADC0: "net.GPIO26",
+        GPIO27_ADC1: "net.GPIO27",
+        GPIO28_ADC2: "net.GPIO28",
+        GPIO29_ADC3: "net.GPIO29",
       }}
     />
     {/* Decoupling Capacitors for IOVDD */}
-    {["C12", "C14", "C8", "C13", "C15", "C19"].map((cName) => (
-      <capacitor
-        name={cName}
-        capacitance="100nF"
-        schOrientation="vertical"
-        footprint="0603"
-        connections={{
-          pin2: "net.GND",
-        }}
-      />
-    ))}
+    <capacitor
+      name="C12"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
+    <capacitor
+      name="C14"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
+    <capacitor
+      name="C8"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
+    <capacitor
+      name="C13"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
+    <capacitor
+      name="C15"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
+    <capacitor
+      name="C19"
+      capacitance="100nF"
+      schOrientation="vertical"
+      footprint="0603"
+      connections={{ pin2: "net.GND" }}
+    />
     <capacitor
       name="C18"
       capacitance="100nF"
