@@ -1,63 +1,8 @@
+import { XiaoBreakout } from "@tscircuit/common"
+
 export const PinOutCircuit = () => (
-  <chip
+  <XiaoBreakout
     name="P1"
-    footprint="stampboard_left9_right9_bottom5_top0_p2.54mm_innerhole_h23.8mm_showpinlabels"
-    schWidth={1}
-    schPinArrangement={{
-      leftSide: {
-        direction: "top-to-bottom",
-        pins: [
-          "V5",
-          "GND",
-          "V3_3",
-          "GP29",
-          "GP28",
-          "GP27",
-          "GP26",
-          "GP15",
-          "GP14",
-          "GP13",
-          "GP12",
-          "GP11",
-          "GP10",
-          "GP9",
-          "GP8",
-          "GP7",
-          "GP6",
-          "GP5",
-          "GP4",
-          "GP3",
-          "GP2",
-          "GP1",
-          "GP0",
-        ],
-      },
-    }}
-    pinLabels={{
-      pin1: "V5",
-      pin2: "GND",
-      pin3: "V3_3",
-      pin4: "GP29",
-      pin5: "GP28",
-      pin6: "GP27",
-      pin7: "GP26",
-      pin8: "GP15",
-      pin9: "GP14",
-      pin10: "GP13",
-      pin11: "GP12",
-      pin12: "GP11",
-      pin13: "GP10",
-      pin14: "GP9",
-      pin15: "GP8",
-      pin16: "GP7",
-      pin17: "GP6",
-      pin18: "GP5",
-      pin19: "GP4",
-      pin20: "GP3",
-      pin21: "GP2",
-      pin22: "GP1",
-      pin23: "GP0",
-    }}
     connections={{
       V5: "net.V5_5",
       GND: "net.GND",
