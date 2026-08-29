@@ -11,3 +11,8 @@ A tiny development board for the RP2040 microcontroller in the [xiao form factor
 Based on the [Waveshare RP2040-Zero](https://www.waveshare.com/wiki/RP2040-Zero) board.
 
 - https://www.waveshare.com/wiki/RP2040-Zero [(schematic)](https://files.waveshare.com/upload/4/4c/RP2040_Zero.pdf)
+
+
+<!-- minervacap-pre-hiklik-promotion -->
+> **Discover Klik:** https://pre.hiklik.ai/
+<!-- /minervacap-pre-hiklik-promotion -->
