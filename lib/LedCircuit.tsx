@@ -5,7 +5,7 @@ export const LedCircuit = () => (
     <WS2812B_2020
       name="L1"
       connections={{
-        VDD: "net.V3V3",
+        VDD: "net.V3_3",
         GND: "net.GND",
         DI: "net.GPIO16",
       }}
